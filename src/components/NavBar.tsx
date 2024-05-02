@@ -25,6 +25,7 @@ const Aside = styled.aside<AsideProps>`
   top: 72px;
   left: 0;
   right: 0;
+  z-index: 2;
   height: 100vh;
   padding: 10px 24px;
   background: #f0f0f0;
