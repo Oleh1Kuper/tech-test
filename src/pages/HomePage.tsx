@@ -9,7 +9,6 @@ import { useTranslation } from 'react-i18next';
 
 const Button = styled.button({
   display: 'block',
-  width: '100px',
   borderRadius: '5px',
   border: '1px solid #5ACEE8',
   padding: '10px',
