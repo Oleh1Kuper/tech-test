@@ -1,30 +1,46 @@
-# React + TypeScript + Vite
+# Tipaw Take-home challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Briefing
 
-Currently, two official plugins are available:
+### 🖥️ Frontend
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You are provided with the following react app. Clone / Fork it and start hacking.
 
-## Expanding the ESLint configuration
+Your task is to build a responsive and user friendly homepage following the following [figma design](https://www.figma.com/file/DmwR0khfS1RYV8KMQ7uiEq/Page?type=design&node-id=0%3A1&mode=design&t=o8Tnul9VKEwdvXzS-1).
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+![img](https://tipaw-api-assets.s3.eu-central-1.amazonaws.com/img_uploads/takeHomeChallenge.png)
 
-- Configure the top-level `parserOptions` property like this:
+## 📚 Tech stack
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+We would like to test your knowledge and the following technologies:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- [**React**](https://reactjs.org/)
+- [**Typescript**](https://www.typescriptlang.org/)
+- **ES6+**
+- [**Emotion.js**](https://emotion.sh/docs/introduction) for styling
+
+Feel free to use any technologies in addition to those mentionned above. No library is off limits.
+
+## 🎯 Criteria
+
+Your submission of the challenge will be judged, among other things, by the following points:
+
+- **UI/UX** should be pleasing, and user friendly accross multiple devices and resolutions.
+- **Readability** of the code (aka clean code code)
+- Conscious **design/technical decisions**
+- **Technical knowledge** of the required technologies
+
+## ✨ Bonus points
+
+- Deploy the application
+
+## 🚀 How to submit your work
+
+- Send us a link to your repository **pmoens@tipaw.com**
+
+## 📝 Final note
+
+We recommend that you spend a **maximum of 4 hours** on this challenge. Your goal should not be to deliver a final product, but more for us to have enough to test your knowledge and understanding of the technologies.
+
+We hope you will enjoy working on this challenge, and if you have any questions
+please do not hesitate to reach out to **pmoens@tipaw.com**
