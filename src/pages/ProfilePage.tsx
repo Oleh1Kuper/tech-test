@@ -8,6 +8,7 @@ import Announcement from '../components/Announcement';
 import ProgressBar from '../components/ProgressBar';
 import CardList from '../components/CardList';
 import { useNavigate } from 'react-router-dom';
+import Spinner from '../components/Spinner';
 
 // #region components
 
@@ -64,8 +65,8 @@ const Section = styled.section({
 // #endregion
 
 const ProfilePage = () => {
-  const { user, isAuthenticated } = useAuth0();
-  const { userFromDB } = useUserFromDB(user);
+  const { user, isAuthenticated, isLoading } = useAuth0();
+  const { userFromDB, isLoad } = useUserFromDB(user);
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -107,6 +108,10 @@ const ProfilePage = () => {
 
   if (!isAuthenticated) {
     navigate('/');
+  }
+
+  if (isLoading || isLoad) {
+    return <Spinner />;
   }
 
   return (

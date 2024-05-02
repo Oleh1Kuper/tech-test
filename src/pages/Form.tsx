@@ -9,6 +9,8 @@ import ImageForm from '../components/forms/ImageForm';
 import { useTranslation } from 'react-i18next';
 import { useAuth0 } from '@auth0/auth0-react';
 import { useNavigate } from 'react-router-dom';
+import useUserFromDB from '../hooks/useUserFromDB';
+import Spinner from '../components/Spinner';
 
 const Section = styled.section({
   display: 'flex',
@@ -32,7 +34,8 @@ const circleStyles = {
 
 const Form = () => {
   const [index, setIndex] = useState(0);
-  const { isAuthenticated } = useAuth0();
+  const { isAuthenticated, user } = useAuth0();
+  const { isLoad } = useUserFromDB(user);
   const navigate = useNavigate();
 
   const nextClick = () => {
@@ -50,6 +53,10 @@ const Form = () => {
 
   if (!isAuthenticated) {
     navigate('/');
+  }
+
+  if (isLoad) {
+    return <Spinner />
   }
 
   return (

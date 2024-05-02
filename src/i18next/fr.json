@@ -35,6 +35,16 @@
       "required": "Le champ est requis",
       "error": "Ce champ doit comporter au moins 2 caractères.",
       "save": "Sauver"
+    },
+    "menu": {
+      "en": "Anglais",
+      "fr": "Français",
+      "logout": "Déconnexion",
+      "profile": "Modifier le profil"
+    },
+    "home": {
+      "h1": "Veuillez connecter vous",
+      "login": "Connexion"
     }
   }
 }

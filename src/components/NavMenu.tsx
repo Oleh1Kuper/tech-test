@@ -67,7 +67,7 @@ export const icon = {
 
 type Props = {
   handleClose?: () => void;
-}
+};
 
 const NavMenu: React.FC<Props> = ({ handleClose = () => {} }) => {
   const { user, logout, isAuthenticated } = useAuth0();
@@ -75,11 +75,11 @@ const NavMenu: React.FC<Props> = ({ handleClose = () => {} }) => {
   const [isOpenUserMenu, setIsOpenUserMenu] = useState(false);
   const [isOpenLanguage, setIsOpenLanguage] = useState(false);
   const lng = localStorage.getItem('lng') || 'en';
-  const [languageTitle, setLanguageTitle] = useState<'English' | 'Franch'>(
-    lng === 'en' ? 'English' : 'Franch',
+  const [languageTitle, setLanguageTitle] = useState<'English' | 'Français'>(
+    lng === 'en' ? 'English' : 'Français',
   );
   const navigate = useNavigate();
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   const toggleUserMenu = () => {
     setIsOpenUserMenu(!isOpenUserMenu);
@@ -95,7 +95,7 @@ const NavMenu: React.FC<Props> = ({ handleClose = () => {} }) => {
 
   const changeLanguage = (lng: string) => () => {
     localStorage.setItem('lng', lng);
-    setLanguageTitle(lng === 'en' ? 'English' : 'Franch');
+    setLanguageTitle(lng === 'en' ? 'English' : 'Français');
     setIsOpenLanguage(false);
     i18n.changeLanguage(lng);
   };
@@ -107,10 +107,15 @@ const NavMenu: React.FC<Props> = ({ handleClose = () => {} }) => {
         <IoLanguage onClick={toggleLanguageMenu} className={css(icon)} />
         <Menu isOpen={isOpenLanguage}>
           <li>
-            <Button onClick={changeLanguage('en')}>English</Button>
+            <Button onClick={changeLanguage('en')}>
+              {t('translation.menu.en')}
+            </Button>
           </li>
+
           <li>
-            <Button onClick={changeLanguage('fr')}>Franch</Button>
+            <Button onClick={changeLanguage('fr')}>
+              {t('translation.menu.fr')}
+            </Button>
           </li>
         </Menu>
       </Box>
@@ -131,15 +136,15 @@ const NavMenu: React.FC<Props> = ({ handleClose = () => {} }) => {
                 onClick={() => {
                   toggleUserMenu();
                   handleClose();
-                  navigate('/form')
+                  navigate('/form');
                 }}
               >
-                Edit Profile
+                {t('translation.menu.profile')}
               </Button>
             </li>
             <li>
               <Button type="button" onClick={onLogOut}>
-                Logout
+                {t('translation.menu.logout')}
               </Button>
             </li>
           </Menu>

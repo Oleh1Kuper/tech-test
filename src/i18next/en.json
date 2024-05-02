@@ -35,6 +35,16 @@
       "required": "Field is required",
       "error": "This filed must be at least 2 characters.",
       "save": "Save"
+    },
+    "menu": {
+      "en": "English",
+      "fr": "French",
+      "logout": "Logout",
+      "profile": "Edit Profile"
+    },
+    "home": {
+      "h1": "Please Login",
+      "login": "Login"
     }
   }
 }

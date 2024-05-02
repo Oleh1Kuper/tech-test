@@ -5,6 +5,7 @@ import { addDoc, collection, getDocs, query, where } from 'firebase/firestore';
 import styled from '@emotion/styled';
 import { css } from '@emotion/css';
 import ProfilePage from './ProfilePage';
+import { useTranslation } from 'react-i18next';
 
 const Button = styled.button({
   display: 'block',
@@ -26,6 +27,7 @@ const Button = styled.button({
 
 const HomePage = () => {
   const { loginWithRedirect, isAuthenticated, user } = useAuth0();
+  const { t } = useTranslation();
 
   const addUser = async (user: User) => {
     const userInfo = {
@@ -57,14 +59,18 @@ const HomePage = () => {
       },
     };
 
-    const q = query(
-      collection(firestore, 'users'),
-      where('email', '==', user.email),
-    );
-    const snapshot = await getDocs(q);
+    try {
+      const q = query(
+        collection(firestore, 'users'),
+        where('email', '==', user.email),
+      );
+      const snapshot = await getDocs(q);
 
-    if (snapshot.empty) {
-      await addDoc(collection(firestore, 'users'), userInfo);
+      if (snapshot.empty) {
+        await addDoc(collection(firestore, 'users'), userInfo);
+      }
+    } catch (error) {
+      throw error;
     }
   };
 
@@ -88,9 +94,9 @@ const HomePage = () => {
         gap: '20px',
       })}
     >
-      <h1>Please Login</h1>
+      <h1>{t('translation.home.h1')}</h1>
       <Button onClick={() => loginWithRedirect()} type="button">
-        Login
+        {t('translation.home.login')}
       </Button>
     </div>
   );
