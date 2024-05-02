@@ -1,0 +1,40 @@
+{
+  "translation": {
+    "verification": {
+      "title": "Vérification",
+      "text": "Vous avez vérifié votre compte"
+    },
+    "singer": {
+      "title": "Chanteur",
+      "text": "Vous avez ajouté un chanteur"
+    },
+    "movie": {
+      "title": "Film",
+      "text": "Vous avez ajouté un film"
+    },
+    "cartoon": {
+      "title": "Dessin animé",
+      "text": "Vous avez ajouté un dessin animé"
+    },
+    "picture": {
+      "title": "Photo de profil",
+      "text": "Vous avez ajouté un photo de profil"
+    },
+    "profile": {
+      "h1": "Vous avez complété avec succès votre profil à Tipaw",
+      "p": "Vous pouvez maintenant utiliser Tipaw à 100% 🎉",
+      "h2": "Profil complété"
+    },
+    "form": {
+      "h1": "Complétez votre profil",
+      "singer": "Chanteuse préférée",
+      "cartoon": "Dessin animé",
+      "movie": "Film préféré",
+      "country": "Pays",
+      "genre": "Genre",
+      "required": "Le champ est requis",
+      "error": "Ce champ doit comporter au moins 2 caractères.",
+      "save": "Sauver"
+    }
+  }
+}
